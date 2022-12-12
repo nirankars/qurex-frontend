@@ -53,7 +53,7 @@ import FrontLayout from "../pages/FrontLayout";
 import Dashboard from "../pages/Admin/Dashboard";
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router";
-import VideoCall from "../pages/VideoCall";
+import AgoraVideoCall from "../pages/AgoraVideoCall";
 import DoctorsList from "../components/DoctorsList";
 const AppRouter = () => {
   const auth = useSelector((state) => state.auth.authData.isAuthenticated);
@@ -77,7 +77,7 @@ const AppRouter = () => {
         />
         <Route
           path="video-call"
-          element={!auth ? <Navigate to="/login" /> : <VideoCall />}
+          element={!auth ? <Navigate to="/login" /> : <AgoraVideoCall />}
         />
         <Route path="*" element={<NoPage />} />
       </Route>

@@ -182,7 +182,7 @@ const Appointment = () => {
 };
 
 const AppointmentComponent = ({ booking, cancelButton }) => {
-  const channel = "test";
+  const channel = "Qurex";
   const timeOngoing =
     true ||
     (moment(booking.from).diff(moment(), "minute") < 0 &&
@@ -230,7 +230,7 @@ const AppointmentComponent = ({ booking, cancelButton }) => {
               <Link
                 to={
                   timeOngoing &&
-                  `/video-call?room_id=${channel}&user_id=${booking?._id}`
+                  `/video-call?room_name=${channel}&booking_id=${booking?._id}`
                 }
                 className={`bg-[#7367f0]  w-52 no-underline rounded-lg text-white flex justify-center py-2 font-semibold ${
                   !timeOngoing ? "opacity-75" : ""

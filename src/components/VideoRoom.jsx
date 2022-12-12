@@ -15,7 +15,7 @@ import consultationAPI from "../api/consultation"
 
 const APP_ID = '487313108aca464bb93de894daedc887';
 const TOKEN =
-  '007eJxTYDhne/fVjw27L26es005RsjpI/dRlQa5WWXP77KriZ86e6RQgcHEwtzY0NjQwCIxOdHEzCQpydI4JdXC0iQlMTUl2cLCfO3DSckNgYwMD1d3MDBCIYjPyhBYWpRawcAAACYpIqs=';
+  '007eJxTYNgof2dTbM+W06ufGeR5XInaws01r2Zx+dLLhuYr2Z65+6goMJhYmBsbGhsaWCQmJ5qYmSQlWRqnpFpYmqQkpqYkW1iYe0VOSW4IZGTQtfNhYmSAQBCflSGwtCi1goEBAFsqHrY=';
 
 const CHANNEL = 'Qurex';
 
@@ -182,6 +182,8 @@ export const VideoRoom = ({ roomid: room_id, userID: user_id }) => {
       agoraCommandQueue = agoraCommandQueue.then(cleanup);
     };
   }, []);
+
+
   const formik = useFormik({
     initialValues: {
       issue: '',
